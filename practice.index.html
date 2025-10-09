@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            background: black;
+            color: white;
+            padding: 25px;
+            width: 100%;
+
+        }
+
+        .container h2 span{
+            color: transparent;
+            -webkit-text-stroke: 1px red;
+            position: relative;
+            display: inline-block;
+            animation: display-text 16s linear infinite;
+            animation-delay:calc(-4s * var(--i)) ;
+        }
+
+        @keyframes display-text {
+        25%,100%{
+                display: none;
+            }
+            
+        }
+
+        .container h2 span::before{
+            content: attr(data-text);
+            width: 0%;
+            overflow: hidden;
+            animation: fill-text 4s linear infinite;
+            color: red;
+            position: absolute;
+            border-right: 1px solid red;
+
+        }
+
+
+        @keyframes fill-text {
+            10%,100%{
+                width: 0;
+            }
+
+            70%,90%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>vishal kashyap</h1>
+        <h2>i am a 
+            <span style="--i:4" data-text = "coder">coder</span>
+            <span style="--i:3" data-text = "desginer">desginer</span>
+            <span style="--i:2" data-text = "youtuber">youtuber</span>
+            <span style="--i:1" data-text = "blogger">blogger</span>
+        </h2>
+    </div>
+</body>
+</html>

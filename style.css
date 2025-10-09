@@ -71,12 +71,22 @@ section{
     height: 100%;
     padding: 9rem 9% 2rem;
     background: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+section.active{
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
 }
 
 .home{
     display: flex;
     align-items: center;
     gap: 5rem;
+
 }
 
 .home-detail h1{
@@ -230,4 +240,21 @@ section{
     width:85%;
     object-fit: cover;
     mix-blend-mode: lighten;
+}
+
+
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span{
+    color: var(--main-color);
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem; 
 }
