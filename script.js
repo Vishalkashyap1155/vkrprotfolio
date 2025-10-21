@@ -3,7 +3,7 @@ const logoLink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section");
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector("header nav");
-
+const bodyChange = document.querySelector("body");
 
 menuIcon.addEventListener("click", ()=>{
     menuIcon.classList.toggle("fa-xmark");
@@ -13,6 +13,10 @@ menuIcon.addEventListener("click", ()=>{
 const activePage = () => {
     const header = document.querySelector("header");
     const barsBox = document.querySelector(".bars-box");
+     bodyChange.style.background = "white"
+    setTimeout(()=>{
+        bodyChange.style.background = "#1f242d"
+    },2105)
 
     header.classList.remove("active");
     setTimeout(() => {
